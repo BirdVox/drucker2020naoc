@@ -39,7 +39,6 @@ for swift_name in swift_names:
         f.write("#SBATCH --output=../slurm/" + job_name + "_%j.out\n")
         f.write("\n")
         f.write("module purge\n")
-        f.write("source activate bvp")
         f.write("\n")
         f.write("# The first argument is the date of the recording.\n")
         f.write("python " + script_path_with_args)
