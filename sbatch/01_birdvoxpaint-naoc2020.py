@@ -6,7 +6,7 @@ sys.path.append("../src")
 # Define constants.
 data_dir = "/beegfs/vl1019/drucker2020naoc_data"
 in_dir = os.path.join(data_dir, "BOGOTA_NFCs_2018")
-swift_names = os.listdir(in_dir)
+swift_names = os.path.listdir(in_dir)
 script_name = os.path.basename(__file__)
 script_path = os.path.join("..", "src", script_name)
 
