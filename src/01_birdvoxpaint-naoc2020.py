@@ -21,7 +21,6 @@ indices = [
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Saving BirdVoxPaint features to HDF5 format.")
-print("birdvoxpaint version: {:s}".format(bvp.__version__))
 print("h5py version: {:s}".format(h5py.__version__))
 print("librosa version: {:s}".format(librosa.__version__))
 print("")
