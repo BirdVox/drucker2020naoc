@@ -51,7 +51,7 @@ file_path = os.path.join(sbatch_dir, file_name + ".sh")
 with open(file_path, "w") as f:
 
     # Loop over recording units.
-    for swift_name in swift_names:
+    for swift_name in sorted(swift_names):
         date_str = os.path.split(swift_name)[1]
         job_name = "_".join([script_name.split("_")[0], date_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
