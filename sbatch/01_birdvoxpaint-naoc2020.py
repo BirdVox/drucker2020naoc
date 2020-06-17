@@ -20,7 +20,7 @@ os.makedirs(slurm_dir, exist_ok=True)
 
 # Loop over recording units.
 for swift_name in swift_names:
-    date_str = os.split(swift_name)[1]
+    date_str = os.path.split(swift_name)[1]
     script_path_with_args = " ".join([script_path, date_str])
     job_name = "_".join([script_name.split("_")[0], date_str])
     file_name = job_name + ".sbatch"
@@ -52,7 +52,7 @@ with open(file_path, "w") as f:
 
     # Loop over recording units.
     for swift_name in swift_names:
-        date_str = os.split(swift_name)[1]
+        date_str = os.path.split(swift_name)[1]
         job_name = "_".join([script_name.split("_")[0], date_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
 
